@@ -16,12 +16,16 @@ def calcular_raiz_cuadrada(numero, tolerancia=0.0001):
     return raiz_aproximada
 
 def main():
-    try:
-        numero = float(input("Ingrese un número para calcular su raíz cuadrada: "))
-        raiz_cuadrada = calcular_raiz_cuadrada(numero)
-        print(f"La raíz cuadrada de {numero} es aproximadamente {raiz_cuadrada}")
-    except ValueError:
-        print("Error: Por favor ingrese un número válido.")
+    while True:
+        try:
+            numero = float(input("Ingrese un número para calcular su raíz cuadrada (o ingrese '0' para salir): "))
+            if numero == 0:
+                print("Saliendo del programa...")
+                break
+            raiz_cuadrada = calcular_raiz_cuadrada(numero)
+            print(f"La raíz cuadrada de {numero} es aproximadamente {raiz_cuadrada:.4f}")
+        except ValueError:
+            print("Error: Por favor ingrese un número válido.")
 
 if __name__ == "__main__":
     main()
