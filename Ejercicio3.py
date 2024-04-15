@@ -21,5 +21,5 @@ def main():
     grados = radianes_a_grados(radianes)
     print("{} radianes equivalen a {} grados sexagesimales.".format(radianes, grados))
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
