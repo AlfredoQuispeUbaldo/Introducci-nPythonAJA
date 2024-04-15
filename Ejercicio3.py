@@ -1,40 +1,23 @@
 import math
 
-
 def grados_a_radianes(grados):
-    return grados * (math.pi / 180)
-
+    radianes = (grados * math.pi) / 180
+    return radianes
 
 def radianes_a_grados(radianes):
-    return radianes * (180 / math.pi)
-
+    grados = (radianes * 180) / math.pi
+    return grados
 
 def main():
-    while True:
-        try:
-            opcion = input(
-                "Seleccione la conversión que desea realizar:\n1. De grados a radianes\n2. De radianes a grados\n3. Salir\nIngrese el número de opción: ")
+    # Convertir de grados a radianes
+    grados = float(input("Ingrese un ángulo en grados sexagesimales: "))
+    radianes = grados_a_radianes(grados)
+    print("{} grados sexagesimales equivalen a {} radianes.".format(grados, radianes))
 
-            if opcion == '3':
-                print("Saliendo del programa...")
-                break
+    # Convertir de radianes a grados
+    radianes = float(input("Ingrese un ángulo en radianes: "))
+    grados = radianes_a_grados(radianes)
+    print("{} radianes equivalen a {} grados sexagesimales.".format(radianes, grados))
 
-            if opcion not in ['1', '2']:
-                print("Opción no válida. Por favor ingrese 1, 2 o 3.")
-                continue
-
-            valor = float(input("Ingrese el valor a convertir: "))
-
-            if opcion == '1':
-                resultado = grados_a_radianes(valor)
-                print(f"{valor} grados sexagesimales equivalen a {resultado:.4f} radianes.")
-            else:
-                resultado = radianes_a_grados(valor)
-                print(f"{valor} radianes equivalen a {resultado:.4f} grados sexagesimales.")
-
-        except ValueError:
-            print("Error: Por favor ingrese un valor numérico válido.")
-
-
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
