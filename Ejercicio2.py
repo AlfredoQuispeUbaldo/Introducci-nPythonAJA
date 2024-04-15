@@ -1,4 +1,4 @@
-#Ejercicio2
+#Ejercicio2 - Hecho por Alfredo - Jhonn - Anyulieth
 
 def obtener_calificacion_numerica():
     calificacion_numerica = -1

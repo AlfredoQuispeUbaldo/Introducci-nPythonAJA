@@ -1,3 +1,5 @@
+#Ejercicio3 - Hecho por Alfredo - Jhonn - Anyulieth
+
 import math
 
 def grados_a_radianes(grados):

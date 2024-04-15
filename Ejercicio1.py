@@ -1,4 +1,4 @@
-#Ejercicio1
+#Ejercicio1 - Hecho por Alfredo - Jhonn - Anyulieth
 
 def calcular_intereses(capital, tasa, años):
     tasa_decimal = tasa / 100
